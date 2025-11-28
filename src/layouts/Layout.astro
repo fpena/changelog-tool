@@ -45,7 +45,7 @@ const { title } = Astro.props;
     <footer class="border-t border-[var(--color-border)]">
       <div class="max-w-3xl mx-auto px-6 py-6">
         <p class="text-center text-sm text-[var(--color-text-secondary)]">
-          © {new Date().getFullYear()} Release Notes
+          © {new Date().getFullYear()} Release Notes - Rain & Green Software Development
         </p>
       </div>
     </footer>
@@ -55,7 +55,7 @@ const { title } = Astro.props;
       (function() {
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
+
         if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
           document.documentElement.classList.add('dark');
         }

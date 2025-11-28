@@ -8,7 +8,7 @@ interface ChangeItemProps {
 const borderColors: Record<ChangeType, string> = {
   feature: 'border-l-[#D19486]',
   fix: 'border-l-[#D16F5B]',
-  breaking: 'border-l-red-500',
+  breaking: 'border-l-[#694035]',
   security: 'border-l-[#BB3B22]',
   changed: 'border-l-[#CB8B43]',
   known: 'border-l-[#ACAB9F]',

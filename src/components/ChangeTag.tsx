@@ -7,7 +7,7 @@ interface ChangeTagProps {
 const tagConfig: Record<ChangeType, { label: string; color: string }> = {
   feature: { label: 'Added', color: 'text-[#D19486]' },
   fix: { label: 'Fixed', color: 'text-[#D16F5B]' },
-  breaking: { label: 'Breaking', color: 'text-red-600 dark:text-red-400' },
+  breaking: { label: 'Breaking', color: 'text-[#694035]' },
   security: { label: 'Security', color: 'text-[#BB3B22]' },
   changed: { label: 'Changed', color: 'text-[#CB8B43]' },
   known: { label: 'Known', color: 'text-[#ACAB9F]' },
