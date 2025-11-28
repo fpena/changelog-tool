@@ -1,0 +1,41 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { ChangelogTimeline } from '../../../components/ChangelogTimeline';
+import { clients } from '../../../content/changelog/data';
+
+export function getStaticPaths() {
+  return clients.flatMap((client) =>
+    client.projects.map((project) => ({
+      params: { client: client.id, project: project.id },
+      props: { clientData: client, projectData: project },
+    }))
+  );
+}
+
+const { clientData, projectData } = Astro.props;
+
+const latestVersion = projectData.changelog[0];
+---
+
+<Layout title={`${projectData.name} - ${clientData.name}`}>
+  <div class="space-y-10">
+    <!-- Project header -->
+    <div class="pb-8 border-b border-[var(--color-border)]">
+      <h1 class="text-4xl font-bold tracking-tight text-[var(--color-text)] mb-3">
+        {projectData.name}
+      </h1>
+      <p class="text-lg text-[var(--color-text-secondary)]">
+        {projectData.description}
+      </p>
+    </div>
+
+    <!-- Changelog -->
+    <ChangelogTimeline project={projectData} client:load />
+  </div>
+</Layout>
+
+<style>
+  :global([id^="v"]) {
+    scroll-margin-top: 6rem;
+  }
+</style>
