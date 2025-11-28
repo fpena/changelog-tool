@@ -18,46 +18,18 @@ const latestVersion = projectData.changelog[0];
 ---
 
 <Layout title={`${projectData.name} - ${clientData.name}`}>
-  <div class="space-y-8">
+  <div class="space-y-10">
     <!-- Project header -->
-    <div class="border-b border-[var(--color-border)] pb-6">
-      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-        <div>
-          <h1 class="text-3xl font-bold text-[var(--color-text)]">
-            {projectData.name}
-          </h1>
-          <p class="mt-2 text-[var(--color-text-secondary)]">
-            {projectData.description}
-          </p>
-        </div>
-        
-        {latestVersion && (
-          <div class="flex-shrink-0">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-500/10 border border-primary-500/20">
-              <span class="text-sm text-[var(--color-text-secondary)]">Latest</span>
-              <span class="font-mono font-semibold text-primary-500">v{latestVersion.version}</span>
-            </div>
-          </div>
-        )}
-      </div>
+    <div class="pb-8 border-b border-[var(--color-border)]">
+      <h1 class="text-4xl font-bold tracking-tight text-[var(--color-text)] mb-3">
+        {projectData.name}
+      </h1>
+      <p class="text-lg text-[var(--color-text-secondary)]">
+        {projectData.description}
+      </p>
     </div>
 
-    <!-- Version quick navigation -->
-    {projectData.changelog.length > 1 && (
-      <div class="flex flex-wrap gap-2">
-        <span class="text-sm text-[var(--color-text-secondary)] mr-2 py-1">Jump to:</span>
-        {projectData.changelog.map((entry) => (
-          <a
-            href={`#v${entry.version}`}
-            class="inline-flex items-center px-3 py-1 rounded-lg bg-surface-200 dark:bg-surface-800 text-sm text-[var(--color-text)] hover:bg-primary-500/10 hover:text-primary-500 transition-colors font-mono"
-          >
-            v{entry.version}
-          </a>
-        ))}
-      </div>
-    )}
-
-    <!-- Changelog timeline -->
+    <!-- Changelog -->
     <ChangelogTimeline project={projectData} client:load />
   </div>
 </Layout>

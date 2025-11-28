@@ -7,7 +7,7 @@ interface ChangelogTimelineProps {
 
 export function ChangelogTimeline({ project }: ChangelogTimelineProps) {
   return (
-    <div className="space-y-8 md:pl-10">
+    <div className="space-y-12">
       {project.changelog.map((entry) => (
         <ChangelogCard key={entry.version} entry={entry} />
       ))}

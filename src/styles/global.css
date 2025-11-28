@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --color-bg: theme('colors.white');
-    --color-text: theme('colors.surface.900');
-    --color-text-secondary: theme('colors.surface.500');
-    --color-border: theme('colors.surface.200');
-    --color-card: theme('colors.surface.50');
+    --color-bg: #ffffff;
+    --color-text: #1a1a2e;
+    --color-text-secondary: #6b7280;
+    --color-border: #e5e7eb;
+    --color-card: #f9fafb;
   }
 
   .dark {
-    --color-bg: theme('colors.surface.950');
-    --color-text: theme('colors.surface.100');
-    --color-text-secondary: theme('colors.surface.400');
-    --color-border: theme('colors.surface.800');
-    --color-card: theme('colors.surface.900');
+    --color-bg: #0f0f1a;
+    --color-text: #f1f1f4;
+    --color-text-secondary: #9ca3af;
+    --color-border: #2a2a3e;
+    --color-card: #1a1a2e;
   }
 
   html {
@@ -25,40 +25,8 @@
 
   body {
     @apply bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-200;
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-}
-
-@layer components {
-  .tag {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-
-  .tag-feature {
-    @apply bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400;
-  }
-
-  .tag-fix {
-    @apply bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400;
-  }
-
-  .tag-improvement {
-    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400;
-  }
-
-  .tag-breaking {
-    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400;
-  }
-
-  .tag-security {
-    @apply bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400;
-  }
-
-  .card {
-    @apply bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-6 transition-all duration-200;
-  }
-
-  .card:hover {
-    @apply border-primary-500/50 shadow-lg shadow-primary-500/5;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
