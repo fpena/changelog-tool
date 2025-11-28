@@ -16,7 +16,7 @@ export function ChangelogCard({ entry }: ChangelogCardProps) {
     <div className="relative" id={`v${entry.version}`}>
       <div className="mb-8">
         {/* Version header */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-4 mb-4 justify-between">
           <h4 className="text-sm font-bold text-[var(--color-text)]">
             {entry.version}
           </h4>
