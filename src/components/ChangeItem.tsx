@@ -15,9 +15,9 @@ const borderColors: Record<ChangeType, string> = {
 
 export function ChangeItem({ change }: ChangeItemProps) {
   return (
-    <div className={`pl-4 py-4 border-l-2 ${borderColors[change.type]} hover:bg-surface-50 dark:hover:bg-surface-900/50 transition-colors`}>
+    <div className={`pl-4 py-4 border-l-2 ${borderColors[change.type]} hover:bg-[var(--color-card)] transition-colors`}>
       <div className="flex items-start gap-3">
-        <div className="flex-shrink-0 w-20">
+        <div className="flex-shrink-0 min-w-20">
           <ChangeTag type={change.type} />
         </div>
         <div className="flex-1 min-w-0">
