@@ -30,232 +30,122 @@ export interface Client {
 
 export const clients: Client[] = [
   {
-    id: 'acme-corp',
-    name: 'Acme Corporation',
-    description: 'Enterprise software solutions for manufacturing',
+    id: 'bokka-group',
+    name: 'Bokka Group Inc',
+    description: 'Innovative solutions for modern businesses',
     projects: [
       {
-        id: 'inventory-system',
-        name: 'Inventory Management System',
-        description: 'Real-time inventory tracking and management',
+        id: 'builder-signal',
+        name: 'Builder Signal',
+        description: 'Construction project management and communication platform',
         changelog: [
           {
-            version: '2.4.0',
-            date: '2024-11-25',
-            summary: 'Major performance improvements and new reporting features',
+            version: '2.1.0',
+            date: '2024-12-15',
+            summary: 'Enhanced reporting and real-time collaboration features',
             changes: [
               {
                 id: '1',
                 type: 'feature',
-                title: 'Advanced Analytics Dashboard with real-time insights and predictive analytics capabilities',
+                title: 'Advanced Project Dashboard with real-time progress tracking and analytics',
               },
               {
                 id: '2',
                 type: 'feature',
-                title: 'Bulk Import/Export functionality for importing and exporting data in bulk operations',
+                title: 'Team Collaboration Tools with instant messaging and file sharing',
               },
               {
-                id: '4',
-                type: 'fix',
-                title: 'Stock Alert Notifications system for sending stock alert notifications to users',
-              },
-              {
-                id: '4a',
+                id: '3',
                 type: 'changed',
-                title: 'User Interface Layout changes with improved User Interface Layout design and navigation',
+                title: 'Improved mobile app performance and UI responsiveness',
               },
             ],
           },
           {
-            version: '2.3.1',
-            date: '2024-11-10',
-            summary: 'Bug fixes and security updates',
+            version: '2.0.5',
+            date: '2024-12-08',
+            summary: 'Bug fixes and stability improvements',
             changes: [
               {
+                id: '4',
+                type: 'fix',
+                title: 'Fixed issue with notification delivery delays',
+              },
+              {
                 id: '5',
-                type: 'security',
-                title: 'Authentication Token Refresh mechanism with improved Authentication Token Refresh security',
+                type: 'fix',
+                title: 'Resolved calendar sync problems with external calendars',
               },
               {
                 id: '6',
                 type: 'fix',
-                title: 'Report Generation Error fix for Report Generation Error issues in PDF exports',
-              },
-              {
-                id: '6a',
-                type: 'known',
-                title: 'Slow Loading on IE11 is a known issue with Slow Loading on IE11 performance',
+                title: 'Fixed PDF export formatting issues in reports',
               },
             ],
           },
           {
-            version: '2.3.0',
-            date: '2024-10-28',
-            summary: 'Multi-warehouse support and API improvements',
+            version: '2.0.0',
+            date: '2024-11-28',
+            summary: 'Major release with new architecture and breaking changes',
             changes: [
               {
                 id: '7',
-                type: 'feature',
-                title: 'Multi-Warehouse Support feature for managing inventory across multiple warehouse locations',
+                type: 'breaking',
+                title: 'API v2 migration - deprecated endpoints will be removed in next release',
               },
               {
                 id: '8',
-                type: 'breaking',
-                title: 'API v2 Migration requires API v2 Migration from deprecated v1 endpoints to v2',
+                type: 'feature',
+                title: 'New authentication system with multi-factor authentication support',
+              },
+              {
+                id: '9',
+                type: 'feature',
+                title: 'Document management system with version control',
               },
             ],
           },
-        ],
-      },
-      {
-        id: 'erp-module',
-        name: 'ERP Integration Module',
-        description: 'Seamless integration with existing ERP systems',
-        changelog: [
           {
-            version: '1.2.0',
-            date: '2024-11-20',
-            summary: 'SAP integration and performance updates',
+            version: '1.9.2',
+            date: '2024-11-15',
+            summary: 'Security updates and performance optimizations',
             changes: [
               {
                 id: '10',
-                type: 'feature',
-                title: 'SAP Business One Connector integration with SAP Business One Connector native support',
+                type: 'security',
+                title: 'Security patch for session management vulnerability',
+              },
+              {
+                id: '11',
+                type: 'fix',
+                title: 'Performance optimization for large project data sets',
+              },
+              {
+                id: '12',
+                type: 'known',
+                title: 'Known issue: Mobile app may experience slow loading on older devices',
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'techstart',
-    name: 'TechStart Inc.',
-    description: 'Innovative startup building the future of work',
-    projects: [
-      {
-        id: 'collaboration-platform',
-        name: 'Team Collaboration Platform',
-        description: 'Real-time collaboration and project management',
-        changelog: [
           {
-            version: '3.0.0',
-            date: '2024-11-22',
-            summary: 'Complete UI overhaul with new features',
+            version: '1.9.0',
+            date: '2024-11-01',
+            summary: 'New scheduling features and workflow improvements',
             changes: [
-              {
-                id: '12',
-                type: 'breaking',
-                title: 'New Architecture implementation with New Architecture for modern tech stack rewrite',
-              },
               {
                 id: '13',
                 type: 'feature',
-                title: 'AI-Powered Task Suggestions feature with AI-Powered Task Suggestions based on history',
+                title: 'Smart scheduling algorithm with resource optimization',
               },
               {
                 id: '14',
                 type: 'feature',
-                title: 'Video Conferencing Integration with built-in Video Conferencing Integration without leaving platform',
+                title: 'Custom workflow builder for project templates',
               },
               {
-                id: '15a',
+                id: '15',
                 type: 'changed',
-                title: 'Notification Preferences changes with updated Notification Preferences default settings configuration',
-              },
-            ],
-          },
-          {
-            version: '2.9.5',
-            date: '2024-11-01',
-            summary: 'Stability improvements',
-            changes: [
-              {
-                id: '16',
-                type: 'fix',
-                title: 'Notification Sync fix for Notification Sync issues with push notifications across devices',
-              },
-              {
-                id: '17',
-                type: 'fix',
-                title: 'File Upload Progress bar fix for File Upload Progress not updating during uploads',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'mobile-app',
-        name: 'Mobile Companion App',
-        description: 'iOS and Android app for on-the-go access',
-        changelog: [
-          {
-            version: '1.5.0',
-            date: '2024-11-18',
-            summary: 'Offline mode and widget support',
-            changes: [
-              {
-                id: '18',
-                type: 'feature',
-                title: 'Offline Mode feature with Offline Mode support for working without internet connection',
-              },
-              {
-                id: '19',
-                type: 'feature',
-                title: 'Home Screen Widgets feature with Home Screen Widgets for iOS and Android platforms',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'greenleaf',
-    name: 'GreenLeaf Organics',
-    description: 'Sustainable agriculture technology',
-    projects: [
-      {
-        id: 'farm-management',
-        name: 'Smart Farm Dashboard',
-        description: 'IoT-powered farm monitoring and management',
-        changelog: [
-          {
-            version: '4.1.0',
-            date: '2024-11-24',
-            summary: 'Weather integration and crop planning',
-            changes: [
-              {
-                id: '21',
-                type: 'feature',
-                title: 'Weather Forecast Integration with real-time Weather Forecast Integration data and forecasts',
-              },
-              {
-                id: '22',
-                type: 'feature',
-                title: 'Crop Planning Calendar feature with Crop Planning Calendar for planting and harvest schedules',
-              },
-              {
-                id: '24',
-                type: 'fix',
-                title: 'GPS Mapping fix for GPS Mapping field boundary mapping issues on certain devices',
-              },
-              {
-                id: '24a',
-                type: 'known',
-                title: 'Weather Data Delay is a known limitation with Weather Data Delay during peak times',
-              },
-            ],
-          },
-          {
-            version: '4.0.2',
-            date: '2024-11-05',
-            summary: 'Critical security patch',
-            changes: [
-              {
-                id: '25',
-                type: 'security',
-                title: 'API Authentication security patch for API Authentication vulnerability in IoT device authentication',
+                title: 'Updated user interface with improved navigation and accessibility',
               },
             ],
           },
