@@ -2,9 +2,11 @@
 
 A beautiful changelog and release notes tool for tracking features, fixes, and improvements across client projects. Built with Astro, React, and Tailwind CSS.
 
+Each client/project has its own dedicated URL that can be shared directly with clients.
+
 ## Features
 
-- 📋 **Multi-client support** - Organize changelogs by client and project
+- 🔗 **Direct URLs** - Each client/project has a unique URL to share with clients
 - 🏷️ **Change categorization** - Features, fixes, improvements, breaking changes, and security updates
 - 🌙 **Dark/Light mode** - System-aware theme with manual toggle
 - 📱 **Responsive design** - Works on desktop, tablet, and mobile
@@ -50,8 +52,6 @@ src/
 │   ├── ChangelogCard.tsx
 │   ├── ChangelogTimeline.tsx
 │   ├── ChangeTag.tsx
-│   ├── ClientCard.tsx
-│   ├── Sidebar.tsx
 │   └── ThemeToggle.tsx
 ├── content/
 │   └── changelog/
@@ -59,13 +59,23 @@ src/
 ├── layouts/
 │   └── Layout.astro     # Main layout
 ├── pages/
-│   ├── index.astro      # Homepage
 │   └── [client]/
 │       └── [project]/
 │           └── index.astro  # Project changelog page
 └── styles/
     └── global.css       # Global styles
 ```
+
+## URL Structure
+
+Each project changelog is accessible at:
+```
+/{client-id}/{project-id}
+```
+
+For example:
+- `/acme-corp/inventory-system`
+- `/techstart/collaboration-platform`
 
 ## Adding Content
 
