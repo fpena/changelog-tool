@@ -5,17 +5,18 @@ interface ChangeTagProps {
 }
 
 const tagConfig: Record<ChangeType, { label: string; color: string }> = {
-  feature: { label: 'Added', color: 'text-emerald-600 dark:text-emerald-400' },
-  fix: { label: 'Fixed', color: 'text-amber-600 dark:text-amber-400' },
-  improvement: { label: 'Improved', color: 'text-blue-600 dark:text-blue-400' },
-  breaking: { label: 'Breaking', color: 'text-red-600 dark:text-red-400' },
-  security: { label: 'Security', color: 'text-purple-600 dark:text-purple-400' },
+  feature: { label: 'Added', color: 'text-[#D19486]' },
+  fix: { label: 'Fixed', color: 'text-[#D16F5B]' },
+  breaking: { label: 'Breaking', color: 'text-[#694035]' },
+  security: { label: 'Security', color: 'text-[#BB3B22]' },
+  changed: { label: 'Changed', color: 'text-[#CB8B43]' },
+  known: { label: 'Known', color: 'text-[#ACAB9F]' },
 };
 
 export function ChangeTag({ type }: ChangeTagProps) {
   const config = tagConfig[type];
   return (
-    <span className={`text-sm font-medium ${config.color}`}>
+    <span className={`text-normal font-medium ${config.color}`}>
       {config.label}
     </span>
   );

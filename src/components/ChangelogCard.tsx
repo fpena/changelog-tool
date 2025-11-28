@@ -17,10 +17,10 @@ export function ChangelogCard({ entry }: ChangelogCardProps) {
       <div className="mb-8">
         {/* Version header */}
         <div className="flex items-center gap-4 mb-4">
-          <h2 className="text-2xl font-bold text-[var(--color-text)]">
+          <h4 className="text-sm font-bold text-[var(--color-text)]">
             {entry.version}
-          </h2>
-          <span className="text-[var(--color-text-secondary)]">
+          </h4>
+          <span className="text-sm text-[var(--color-text-secondary)]">
             {formattedDate}
           </span>
         </div>
