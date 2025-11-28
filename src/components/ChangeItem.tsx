@@ -6,27 +6,23 @@ interface ChangeItemProps {
 }
 
 const borderColors: Record<ChangeType, string> = {
-  feature: 'border-l-emerald-500',
-  fix: 'border-l-amber-500',
-  improvement: 'border-l-blue-500',
+  feature: 'border-l-[#D19486]',
+  fix: 'border-l-[#D16F5B]',
   breaking: 'border-l-red-500',
-  security: 'border-l-purple-500',
+  security: 'border-l-[#BB3B22]',
+  changed: 'border-l-[#CB8B43]',
+  known: 'border-l-[#ACAB9F]',
 };
 
 export function ChangeItem({ change }: ChangeItemProps) {
   return (
-    <div className={`pl-4 py-4 border-l-2 ${borderColors[change.type]} hover:bg-[var(--color-card)] transition-colors`}>
+    <div className={`py-1 transition-colors`}>
       <div className="flex items-start gap-3">
         <div className="flex-shrink-0 min-w-20">
           <ChangeTag type={change.type} />
         </div>
         <div className="flex-1 min-w-0">
           <h4 className="font-medium text-[var(--color-text)]">{change.title}</h4>
-          {change.description && (
-            <p className="mt-1 text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              {change.description}
-            </p>
-          )}
         </div>
       </div>
     </div>

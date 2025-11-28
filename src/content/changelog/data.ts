@@ -1,10 +1,9 @@
-export type ChangeType = 'feature' | 'fix' | 'improvement' | 'breaking' | 'security';
+export type ChangeType = 'feature' | 'fix' | 'breaking' | 'security' | 'changed' | 'known';
 
 export interface Change {
   id: string;
   type: ChangeType;
   title: string;
-  description?: string;
 }
 
 export interface ChangelogEntry {
@@ -48,26 +47,22 @@ export const clients: Client[] = [
               {
                 id: '1',
                 type: 'feature',
-                title: 'Advanced Analytics Dashboard',
-                description: 'New dashboard with real-time inventory insights and predictive analytics',
+                title: 'Advanced Analytics Dashboard with real-time insights and predictive analytics capabilities',
               },
               {
                 id: '2',
                 type: 'feature',
-                title: 'Bulk Import/Export',
-                description: 'Support for CSV and Excel file imports with automatic field mapping',
-              },
-              {
-                id: '3',
-                type: 'improvement',
-                title: 'Database Query Optimization',
-                description: 'Reduced query times by 60% for large inventories',
+                title: 'Bulk Import/Export functionality for importing and exporting data in bulk operations',
               },
               {
                 id: '4',
                 type: 'fix',
-                title: 'Stock Alert Notifications',
-                description: 'Fixed issue where low stock alerts were not being sent',
+                title: 'Stock Alert Notifications system for sending stock alert notifications to users',
+              },
+              {
+                id: '4a',
+                type: 'changed',
+                title: 'User Interface Layout changes with improved User Interface Layout design and navigation',
               },
             ],
           },
@@ -79,14 +74,17 @@ export const clients: Client[] = [
               {
                 id: '5',
                 type: 'security',
-                title: 'Authentication Token Refresh',
-                description: 'Improved token refresh mechanism to prevent session hijacking',
+                title: 'Authentication Token Refresh mechanism with improved Authentication Token Refresh security',
               },
               {
                 id: '6',
                 type: 'fix',
-                title: 'Report Generation Error',
-                description: 'Fixed PDF export failing for reports with special characters',
+                title: 'Report Generation Error fix for Report Generation Error issues in PDF exports',
+              },
+              {
+                id: '6a',
+                type: 'known',
+                title: 'Slow Loading on IE11 is a known issue with Slow Loading on IE11 performance',
               },
             ],
           },
@@ -98,20 +96,12 @@ export const clients: Client[] = [
               {
                 id: '7',
                 type: 'feature',
-                title: 'Multi-Warehouse Support',
-                description: 'Manage inventory across multiple warehouse locations',
+                title: 'Multi-Warehouse Support feature for managing inventory across multiple warehouse locations',
               },
               {
                 id: '8',
                 type: 'breaking',
-                title: 'API v2 Migration',
-                description: 'Deprecated v1 endpoints - please migrate to v2 API',
-              },
-              {
-                id: '9',
-                type: 'improvement',
-                title: 'Mobile Responsive Design',
-                description: 'Improved mobile experience for warehouse floor operations',
+                title: 'API v2 Migration requires API v2 Migration from deprecated v1 endpoints to v2',
               },
             ],
           },
@@ -130,14 +120,7 @@ export const clients: Client[] = [
               {
                 id: '10',
                 type: 'feature',
-                title: 'SAP Business One Connector',
-                description: 'Native integration with SAP Business One',
-              },
-              {
-                id: '11',
-                type: 'improvement',
-                title: 'Sync Performance',
-                description: 'Improved data synchronization speed by 40%',
+                title: 'SAP Business One Connector integration with SAP Business One Connector native support',
               },
             ],
           },
@@ -163,26 +146,22 @@ export const clients: Client[] = [
               {
                 id: '12',
                 type: 'breaking',
-                title: 'New Architecture',
-                description: 'Complete rewrite using modern tech stack - some plugins may need updates',
+                title: 'New Architecture implementation with New Architecture for modern tech stack rewrite',
               },
               {
                 id: '13',
                 type: 'feature',
-                title: 'AI-Powered Task Suggestions',
-                description: 'Smart task recommendations based on project history',
+                title: 'AI-Powered Task Suggestions feature with AI-Powered Task Suggestions based on history',
               },
               {
                 id: '14',
                 type: 'feature',
-                title: 'Video Conferencing Integration',
-                description: 'Built-in video calls without leaving the platform',
+                title: 'Video Conferencing Integration with built-in Video Conferencing Integration without leaving platform',
               },
               {
-                id: '15',
-                type: 'improvement',
-                title: 'Dark Mode',
-                description: 'System-wide dark mode support',
+                id: '15a',
+                type: 'changed',
+                title: 'Notification Preferences changes with updated Notification Preferences default settings configuration',
               },
             ],
           },
@@ -194,14 +173,12 @@ export const clients: Client[] = [
               {
                 id: '16',
                 type: 'fix',
-                title: 'Notification Sync',
-                description: 'Fixed push notifications not syncing across devices',
+                title: 'Notification Sync fix for Notification Sync issues with push notifications across devices',
               },
               {
                 id: '17',
                 type: 'fix',
-                title: 'File Upload Progress',
-                description: 'Fixed progress bar not updating during large file uploads',
+                title: 'File Upload Progress bar fix for File Upload Progress not updating during uploads',
               },
             ],
           },
@@ -220,20 +197,12 @@ export const clients: Client[] = [
               {
                 id: '18',
                 type: 'feature',
-                title: 'Offline Mode',
-                description: 'Work without internet connection - changes sync when back online',
+                title: 'Offline Mode feature with Offline Mode support for working without internet connection',
               },
               {
                 id: '19',
                 type: 'feature',
-                title: 'Home Screen Widgets',
-                description: 'Quick access widgets for iOS and Android',
-              },
-              {
-                id: '20',
-                type: 'improvement',
-                title: 'Battery Optimization',
-                description: 'Reduced battery usage by 30%',
+                title: 'Home Screen Widgets feature with Home Screen Widgets for iOS and Android platforms',
               },
             ],
           },
@@ -259,26 +228,22 @@ export const clients: Client[] = [
               {
                 id: '21',
                 type: 'feature',
-                title: 'Weather Forecast Integration',
-                description: 'Real-time weather data and 14-day forecasts',
+                title: 'Weather Forecast Integration with real-time Weather Forecast Integration data and forecasts',
               },
               {
                 id: '22',
                 type: 'feature',
-                title: 'Crop Planning Calendar',
-                description: 'Visual calendar for planting and harvest schedules',
-              },
-              {
-                id: '23',
-                type: 'improvement',
-                title: 'Sensor Data Accuracy',
-                description: 'Improved soil moisture reading accuracy',
+                title: 'Crop Planning Calendar feature with Crop Planning Calendar for planting and harvest schedules',
               },
               {
                 id: '24',
                 type: 'fix',
-                title: 'GPS Mapping',
-                description: 'Fixed field boundary mapping on certain devices',
+                title: 'GPS Mapping fix for GPS Mapping field boundary mapping issues on certain devices',
+              },
+              {
+                id: '24a',
+                type: 'known',
+                title: 'Weather Data Delay is a known limitation with Weather Data Delay during peak times',
               },
             ],
           },
@@ -290,8 +255,7 @@ export const clients: Client[] = [
               {
                 id: '25',
                 type: 'security',
-                title: 'API Authentication',
-                description: 'Patched vulnerability in IoT device authentication',
+                title: 'API Authentication security patch for API Authentication vulnerability in IoT device authentication',
               },
             ],
           },
