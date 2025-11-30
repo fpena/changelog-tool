@@ -68,8 +68,8 @@ export const clients: Client[] = [
               },
               {
                 id: '5',
-                type: 'fix',
-                title: 'Resolved calendar sync problems with external calendars',
+                type: 'changed',
+                title: 'Converted update create/edit modals to full page routes',
               },
             ],
           },
