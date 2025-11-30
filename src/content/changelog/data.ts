@@ -40,112 +40,36 @@ export const clients: Client[] = [
         description: 'Construction project management and communication platform',
         changelog: [
           {
-            version: '2.1.0',
-            date: '2024-12-15',
-            summary: 'Enhanced reporting and real-time collaboration features',
+            version: 'Web App / API',
+            date: '2025-11-24',
+            summary: 'New editor experience and faster media uploads',
             changes: [
               {
                 id: '1',
                 type: 'feature',
-                title: 'Advanced Project Dashboard with real-time progress tracking and analytics',
+                title: 'New editor experience (TinyMCE) when creating an editing an update',
               },
               {
                 id: '2',
-                type: 'feature',
-                title: 'Team Collaboration Tools with instant messaging and file sharing',
-              },
-              {
-                id: '3',
                 type: 'changed',
-                title: 'Improved mobile app performance and UI responsiveness',
+                title: 'Faster experience when uploading photos and videos',
               },
             ],
           },
           {
-            version: '2.0.5',
-            date: '2024-12-08',
+            version: 'Web App / API',
+            date: '2025-11-17',
             summary: 'Bug fixes and stability improvements',
             changes: [
               {
                 id: '4',
                 type: 'fix',
-                title: 'Fixed issue with notification delivery delays',
+                title: 'Fixed issue where home was not selected when creating an update',
               },
               {
                 id: '5',
                 type: 'fix',
                 title: 'Resolved calendar sync problems with external calendars',
-              },
-              {
-                id: '6',
-                type: 'fix',
-                title: 'Fixed PDF export formatting issues in reports',
-              },
-            ],
-          },
-          {
-            version: '2.0.0',
-            date: '2024-11-28',
-            summary: 'Major release with new architecture and breaking changes',
-            changes: [
-              {
-                id: '7',
-                type: 'breaking',
-                title: 'API v2 migration - deprecated endpoints will be removed in next release',
-              },
-              {
-                id: '8',
-                type: 'feature',
-                title: 'New authentication system with multi-factor authentication support',
-              },
-              {
-                id: '9',
-                type: 'feature',
-                title: 'Document management system with version control',
-              },
-            ],
-          },
-          {
-            version: '1.9.2',
-            date: '2024-11-15',
-            summary: 'Security updates and performance optimizations',
-            changes: [
-              {
-                id: '10',
-                type: 'security',
-                title: 'Security patch for session management vulnerability',
-              },
-              {
-                id: '11',
-                type: 'fix',
-                title: 'Performance optimization for large project data sets',
-              },
-              {
-                id: '12',
-                type: 'known',
-                title: 'Known issue: Mobile app may experience slow loading on older devices',
-              },
-            ],
-          },
-          {
-            version: '1.9.0',
-            date: '2024-11-01',
-            summary: 'New scheduling features and workflow improvements',
-            changes: [
-              {
-                id: '13',
-                type: 'feature',
-                title: 'Smart scheduling algorithm with resource optimization',
-              },
-              {
-                id: '14',
-                type: 'feature',
-                title: 'Custom workflow builder for project templates',
-              },
-              {
-                id: '15',
-                type: 'changed',
-                title: 'Updated user interface with improved navigation and accessibility',
               },
             ],
           },
