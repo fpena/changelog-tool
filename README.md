@@ -12,6 +12,7 @@ Each client/project has its own dedicated URL that can be shared directly with c
 - 📱 **Responsive design** - Works on desktop, tablet, and mobile
 - ⚡ **Fast & static** - Built with Astro for optimal performance
 - 🎨 **Modern UI** - Inspired by Zen Browser's release notes design
+- 📦 **Storyblok CMS** - Optional headless CMS integration for content management
 
 ## Tech Stack
 
@@ -19,6 +20,7 @@ Each client/project has its own dedicated URL that can be shared directly with c
 - [React](https://react.dev/) - UI components
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Storyblok](https://www.storyblok.com/) - Headless CMS (optional)
 
 ## Getting Started
 
@@ -55,7 +57,10 @@ src/
 │   └── ThemeToggle.tsx
 ├── content/
 │   └── changelog/
-│       └── data.ts      # Client/project data
+│       └── data.ts      # Local client/project data (fallback)
+├── lib/
+│   ├── dataService.ts   # Data fetching service (Storyblok + local)
+│   └── storyblok.ts     # Storyblok API utilities
 ├── layouts/
 │   └── Layout.astro     # Main layout
 ├── pages/
@@ -77,12 +82,52 @@ For example:
 - `/acme-corp/inventory-system`
 - `/techstart/collaboration-platform`
 
-## Adding Content
+## Content Management
+
+### Option 1: Storyblok CMS (Recommended)
+
+Storyblok integration allows you to manage clients, projects, and changelog entries through a visual CMS interface.
+
+#### Setup
+
+1. Create a [Storyblok](https://www.storyblok.com/) account
+2. Create a new space
+3. Copy `.env.example` to `.env` and add your Storyblok preview token:
+   ```
+   STORYBLOK_TOKEN=your_preview_token_here
+   ```
+
+#### Content Types
+
+Create the following content types in Storyblok:
+
+**Client** (folder: `clients/`)
+- `name` (Text) - Client display name
+- `description` (Text) - Client description  
+- `logo` (Asset) - Client logo (optional)
+- `projects` (Multi-Options, Stories) - Related project stories
+
+**Project** (folder: `projects/`)
+- `name` (Text) - Project display name
+- `description` (Text) - Project description
+- `changelog` (Blocks) - List of changelog entries
+
+**Changelog Entry** (nestable block)
+- `version` (Text) - Version number or label
+- `date` (Date) - Release date
+- `summary` (Text) - Brief summary (optional)
+- `changes` (Blocks) - List of changes
+
+**Change** (nestable block)
+- `type` (Single-Option) - One of: feature, fix, breaking, security, changed, known
+- `title` (Text) - Change description
+
+### Option 2: Local Data
 
 Edit `src/content/changelog/data.ts` to add clients, projects, and changelog entries:
 
 ```typescript
-export const clients: Client[] = [
+export const localClients: Client[] = [
   {
     id: 'client-slug',
     name: 'Client Name',
@@ -102,7 +147,6 @@ export const clients: Client[] = [
                 id: '1',
                 type: 'feature',
                 title: 'New feature',
-                description: 'Feature description',
               },
             ],
           },
@@ -117,9 +161,10 @@ export const clients: Client[] = [
 
 - `feature` - New features
 - `fix` - Bug fixes
-- `improvement` - Improvements to existing features
+- `changed` - Changes to existing features
 - `breaking` - Breaking changes
 - `security` - Security updates
+- `known` - Known issues
 
 ## License
 

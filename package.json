@@ -10,12 +10,19 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "keywords": ["changelog", "release-notes", "astro", "react", "tailwind"],
+  "keywords": [
+    "changelog",
+    "release-notes",
+    "astro",
+    "react",
+    "tailwind"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
+    "@storyblok/astro": "^7.3.6",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.16.2",
