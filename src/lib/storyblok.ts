@@ -62,7 +62,9 @@ export async function fetchClient(clientSlug: string): Promise<Client | undefine
       resolve_relations: ['client.projects'],
     };
 
-    const { data } = await storyblokApi.get(`cdn/stories/clients/${clientSlug}`, params);
+    // Encode slug to prevent path traversal
+    const safeSlug = encodeURIComponent(clientSlug);
+    const { data } = await storyblokApi.get(`cdn/stories/clients/${safeSlug}`, params);
     return transformStoryblokClient(data.story);
   } catch {
     return undefined;
@@ -78,14 +80,18 @@ export async function fetchProject(clientSlug: string, projectSlug: string): Pro
       version: import.meta.env.DEV ? 'draft' : 'published',
     };
 
+    // Encode slugs to prevent path traversal
+    const safeClientSlug = encodeURIComponent(clientSlug);
+    const safeProjectSlug = encodeURIComponent(projectSlug);
+
     // Fetch client
-    const { data: clientData } = await storyblokApi.get(`cdn/stories/clients/${clientSlug}`, clientParams);
+    const { data: clientData } = await storyblokApi.get(`cdn/stories/clients/${safeClientSlug}`, clientParams);
     
     // Fetch project
     const projectParams: ISbStoriesParams = {
       version: import.meta.env.DEV ? 'draft' : 'published',
     };
-    const { data: projectData } = await storyblokApi.get(`cdn/stories/projects/${projectSlug}`, projectParams);
+    const { data: projectData } = await storyblokApi.get(`cdn/stories/projects/${safeProjectSlug}`, projectParams);
     
     const client = transformStoryblokClient(clientData.story);
     const project = transformStoryblokProject(projectData.story);
