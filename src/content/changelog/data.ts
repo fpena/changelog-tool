@@ -54,6 +54,11 @@ export const clients: Client[] = [
                 type: 'changed',
                 title: 'Faster experience when uploading photos and videos',
               },
+              {
+                id: '3',
+                type: 'fix',
+                title: 'Added default welcome update on home import',
+              },
             ],
           },
           {
@@ -70,6 +75,11 @@ export const clients: Client[] = [
                 id: '5',
                 type: 'changed',
                 title: 'Converted update create/edit modals to full page routes',
+              },
+              {
+                id: '6',
+                type: 'changed',
+                title: 'Revised and expanded the default homebuilding phases',
               },
             ],
           },
