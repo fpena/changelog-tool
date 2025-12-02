@@ -28,7 +28,8 @@ export interface Client {
   projects: Project[];
 }
 
-export const clients: Client[] = [
+// Local fallback data - used when Storyblok is not configured
+export const localClients: Client[] = [
   {
     id: 'bokka-group',
     name: 'Bokka Group Inc',
@@ -89,8 +90,11 @@ export const clients: Client[] = [
   },
 ];
 
+// Keep 'clients' export for backwards compatibility
+export const clients = localClients;
+
 export function getClient(clientId: string): Client | undefined {
-  return clients.find((c) => c.id === clientId);
+  return localClients.find((c) => c.id === clientId);
 }
 
 export function getProject(clientId: string, projectId: string): Project | undefined {
@@ -99,7 +103,7 @@ export function getProject(clientId: string, projectId: string): Project | undef
 }
 
 export function getAllProjects(): { client: Client; project: Project }[] {
-  return clients.flatMap((client) =>
+  return localClients.flatMap((client) =>
     client.projects.map((project) => ({ client, project }))
   );
 }

@@ -1,15 +1,15 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { ChangelogTimeline } from '../../../components/ChangelogTimeline';
-import { clients } from '../../../content/changelog/data';
+import { getAllProjects } from '../../../lib/dataService';
 
-export function getStaticPaths() {
-  return clients.flatMap((client) =>
-    client.projects.map((project) => ({
-      params: { client: client.id, project: project.id },
-      props: { clientData: client, projectData: project },
-    }))
-  );
+export async function getStaticPaths() {
+  const allProjects = await getAllProjects();
+  
+  return allProjects.map(({ client, project }) => ({
+    params: { client: client.id, project: project.id },
+    props: { clientData: client, projectData: project },
+  }));
 }
 
 const { clientData, projectData } = Astro.props;
