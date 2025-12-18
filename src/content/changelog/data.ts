@@ -1,9 +1,19 @@
 export type ChangeType = 'feature' | 'fix' | 'breaking' | 'security' | 'changed' | 'known';
 
+export type RoadmapStatus = 'planned' | 'in-progress' | 'completed';
+
 export interface Change {
   id: string;
   type: ChangeType;
   title: string;
+}
+
+export interface RoadmapItem {
+  id: string;
+  title: string;
+  description?: string;
+  status: RoadmapStatus;
+  targetDate?: string;
 }
 
 export interface ChangelogEntry {
@@ -18,6 +28,7 @@ export interface Project {
   name: string;
   description: string;
   changelog: ChangelogEntry[];
+  roadmap?: RoadmapItem[];
 }
 
 export interface Client {
@@ -82,6 +93,44 @@ export const clients: Client[] = [
                 title: 'Revised and expanded the default homebuilding phases',
               },
             ],
+          },
+          {
+            version: 'Process',
+            date: '2025-09-25',
+            summary: 'Improved coordination and development systems',
+            changes: [
+              {
+                id: '7',
+                type: 'changed',
+                title: 'Migrated planning from Excel to ClickUp',
+              },
+              {
+                id: '8',
+                type: 'feature',
+                title: 'Adopted Bokka Group\'s system of epics, features and stories',
+              },
+              {
+                id: '9',
+                type: 'feature',
+                title: 'Integrated two-week development cycles',
+              },
+            ],
+          },
+        ],
+        roadmap: [
+          {
+            id: 'r1',
+            title: 'Update templates library',
+            description: 'A library of pre-built templates for builders to create higher quality updates faster and share them with homeowners more efficiently',
+            status: 'in-progress',
+            targetDate: 'December 2025',
+          },
+          {
+            id: 'r2',
+            title: 'Draft Management System',
+            description: 'Save Draft button with cloud sync, auto-save every 30 seconds to prevent data loss, and redesigned Drafts screen with Saved/Local/Failed sections. Eliminates 12-hour memory limit, enables cross-device work, and team collaboration',
+            status: 'in-progress',
+            targetDate: 'December 2025',
           },
         ],
       },

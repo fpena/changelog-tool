@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { ChangelogTimeline } from '../../../components/ChangelogTimeline';
+import { ProjectTabs } from '../../../components/ProjectTabs';
 import { clients } from '../../../content/changelog/data';
 
 export function getStaticPaths() {
@@ -13,8 +13,6 @@ export function getStaticPaths() {
 }
 
 const { clientData, projectData } = Astro.props;
-
-const latestVersion = projectData.changelog[0];
 ---
 
 <Layout title={`${projectData.name} - ${clientData.name}`}>
@@ -29,8 +27,8 @@ const latestVersion = projectData.changelog[0];
       </p>
     </div>
 
-    <!-- Changelog -->
-    <ChangelogTimeline project={projectData} client:load />
+    <!-- Project Tabs: Roadmap & Changelog -->
+    <ProjectTabs project={projectData} client:load />
   </div>
 </Layout>
 
