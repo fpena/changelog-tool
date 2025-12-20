@@ -161,6 +161,13 @@ export const clients: Client[] = [
           },
           {
             id: 'r2',
+            title: 'App user access to web app',
+            description: 'Allow app users to access the web app to view their homes, manageupdates, and other data',
+            status: 'in-progress',
+            targetDate: 'December 2025',
+          },
+          {
+            id: 'r3',
             title: 'Draft Management System',
             description: 'Save Draft button with cloud sync, auto-save every 30 seconds to prevent data loss, and redesigned Drafts screen with Saved/Local/Failed sections. Eliminates 12-hour memory limit, enables cross-device work, and team collaboration',
             status: 'in-progress',

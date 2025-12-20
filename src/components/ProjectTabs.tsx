@@ -10,16 +10,16 @@ interface ProjectTabsProps {
 export function ProjectTabs({ project }: ProjectTabsProps) {
   const tabs = [
     {
-      id: 'changelog',
-      label: 'Changelog',
-      content: <ChangelogTimeline project={project} />,
-    },
-    {
       id: 'roadmap',
       label: 'Roadmap',
       content: <Roadmap items={project.roadmap || []} />,
     },
+    {
+      id: 'changelog',
+      label: 'Changelog',
+      content: <ChangelogTimeline project={project} />,
+    },
   ];
 
-  return <Tabs tabs={tabs} defaultTab="changelog" />;
+  return <Tabs tabs={tabs} defaultTab="roadmap" />;
 }
