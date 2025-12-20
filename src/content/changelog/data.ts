@@ -95,6 +95,40 @@ export const clients: Client[] = [
             ],
           },
           {
+            version: 'API',
+            date: '2025-11-10',
+            summary: 'Improved transactional email content and layout',
+            changes: [
+              {
+                id: '7',
+                type: 'changed',
+                title: 'Improved transactional email content and layout',
+              }
+            ],
+          },
+          {
+            version: 'Web App / API',
+            date: '2025-10-27',
+            summary: 'Enhanced URL validation and added template library features',
+            changes: [
+              {
+                id: '8',
+                type: 'fix',
+                title: 'Enhanced URL validation with stricter domain checks',
+              },
+              {
+                id: '9',
+                type: 'feature',
+                title: 'Explore and create demo for templates library',
+              },
+              {
+                id: '10',
+                type: 'fix',
+                title: 'Active homes selection by user role',
+              },
+            ],
+          },
+          {
             version: 'Process',
             date: '2025-09-25',
             summary: 'Improved coordination and development systems',
