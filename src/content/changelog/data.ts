@@ -129,6 +129,45 @@ export const clients: Client[] = [
             ],
           },
           {
+            version: 'Web App',
+            date: '2025-10-20',
+            summary: 'Layout improvements to home detail page and header layout',
+            changes: [
+              {
+                id: '11',
+                type: 'fix',
+                title: 'Updated header layout and logo width in FiftyFifty layout',
+              },
+              {
+                id: '12',
+                type: 'fix',
+                title: 'Added layout improvements to home detail page',
+              },
+            ],
+          },
+          {
+            version: 'Web App / API',
+            date: '2025-10-13',
+            summary: 'Layout improvements to home detail page and header layout',
+            changes: [
+              {
+                id: '13',
+                type: 'changed',
+                title: 'Enhanced draft update experience',
+              },
+              {
+                id: '14',
+                type: 'feature',
+                title: 'Added draft update email reminders',
+              },
+              {
+                id: '15',
+                type: 'feature',
+                title: 'Added community creation API endpoint',
+              },
+            ],
+          },
+          {
             version: 'Process',
             date: '2025-09-25',
             summary: 'Improved coordination and development systems',
