@@ -6,7 +6,10 @@ interface ChangelogCardProps {
 }
 
 export function ChangelogCard({ entry }: ChangelogCardProps) {
-  const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
+  // Append 'T00:00:00' to parse as local midnight instead of UTC
+  // Without this, '2025-12-11' is parsed as UTC midnight, which shows as
+  // Dec 10 in timezones behind UTC (e.g., Americas)
+  const formattedDate = new Date(entry.date + 'T00:00:00').toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
