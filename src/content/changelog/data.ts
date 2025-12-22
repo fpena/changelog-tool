@@ -207,6 +207,23 @@ export const clients: Client[] = [
             ],
           },
           {
+            version: 'Web App',
+            date: '2025-10-13',
+            summary: 'Product analytics with PostHog to track platform usage',
+            changes: [
+              {
+                id: '30',
+                type: 'feature',
+                title: 'Tracking key platform activities: user signups, home creation, updates posted',
+              },
+              {
+                id: '31',
+                type: 'feature',
+                title: 'Weekly Active Users (WAU) dashboard to measure builder engagement',
+              },
+            ],
+          },
+          {
             version: 'Web App / API',
             date: '2025-10-13',
             summary: 'Layout improvements to home detail page and header layout',
