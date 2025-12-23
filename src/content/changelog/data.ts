@@ -51,6 +51,67 @@ export const clients: Client[] = [
         description: 'Construction project management and communication platform',
         changelog: [
           {
+            version: 'Exploration',
+            date: '2025-12-11',
+            summary: 'Template Library v2.5',
+            changes: [
+              {
+                id: '25',
+                type: 'changed',
+                title: 'Reduced builder decision fatigue: simplified from 96 variants to 32 templates (one per update type)',
+              },
+              {
+                id: '26',
+                type: 'changed',
+                title: 'Renamed "Exterior Installation" to "Siding, Windows and Doors" and reordered construction phases',
+              },
+            ],
+          },
+          {
+            version: 'Exploration',
+            date: '2025-12-09',
+            summary: 'Template Library v2.2',
+            changes: [
+              {
+                id: '24',
+                type: 'feature',
+                title: '32 templates with 3 variants each (short, standard, long) across 10 phases',
+              },
+              {
+                id: '27',
+                type: 'changed',
+                title: 'Streamlined template selection UX: browse and apply templates in one view',
+              },
+            ],
+          },
+          {
+            version: 'Exploration',
+            date: '2025-12-04',
+            summary: 'Builder onboarding prototypes',
+            changes: [
+              {
+                id: '20',
+                type: 'feature',
+                title: 'Onboarding flow prototype: new users see homeowner timeline value in 3 clicks',
+              },
+              {
+                id: '21',
+                type: 'feature',
+                title: 'Home creation wizard prototype: unified 3-step flow (Home, Homeowner, Team)',
+              },
+              {
+                id: '22',
+                type: 'changed',
+                title: 'Terminology proposal: "App User" to "Team Member" with Admin/Member roles',
+              },
+              {
+                id: '23',
+                type: 'feature',
+                title: 'Interactive presentation with research findings and key insights',
+              },
+            ],
+          },
+          {
             version: 'Web App / API',
             date: '2025-11-24',
             summary: 'New editor experience and faster media uploads',
@@ -146,6 +207,23 @@ export const clients: Client[] = [
             ],
           },
           {
+            version: 'Web App',
+            date: '2025-10-13',
+            summary: 'Product analytics with PostHog to track platform usage',
+            changes: [
+              {
+                id: '30',
+                type: 'feature',
+                title: 'Tracking key platform activities: user signups, home creation, updates posted',
+              },
+              {
+                id: '31',
+                type: 'feature',
+                title: 'Weekly Active Users (WAU) dashboard to measure builder engagement',
+              },
+            ],
+          },
+          {
             version: 'Web App / API',
             date: '2025-10-13',
             summary: 'Layout improvements to home detail page and header layout',
@@ -201,7 +279,7 @@ export const clients: Client[] = [
           {
             id: 'r2',
             title: 'App user access to web app',
-            description: 'Allow app users to access the web app to view their homes, manageupdates, and other data',
+            description: 'Allow app users to access the web app to view their homes, manage updates, and other data',
             status: 'in-progress',
             targetDate: 'December 2025',
           },
